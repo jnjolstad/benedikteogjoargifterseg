@@ -13,7 +13,7 @@
   justify-content: center; /* centers elements horizontally */
 }
 #image {
-  height: 10vh;
+  height: 90vh;
   width: 100vw;
   width: auto;
   object-fit: contain;
