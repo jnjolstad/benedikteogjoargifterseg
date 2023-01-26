@@ -1,21 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-img {
-  height: 100vh;
-  width: auto;
-  object-fit: contain;
-}
-</style>
-</head>
-<body>
-
-<img id="image" src="images/benedikteogjoar.jpg">
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
-
-<script>
+  
+  <script>
 var image = document.getElementById("image");
 var prevBtn = document.getElementById("prev-btn");
 var nextBtn = document.getElementById("next-btn");
@@ -32,6 +19,21 @@ nextBtn.addEventListener("click", function() {
   image.src = images[currentImageIndex];
 });
 </script>
+<style>
+img {
+  height: 100vh;
+  width: auto;
+  object-fit: contain;
+}
+</style>
+</head>
+<body>
+
+<img id="image" src="images/benedikteogjoar.jpg">
+<button id="prev-btn">Previous</button>
+<button id="next-btn">Next</button>
+
+
 
 </body>
 </html>
