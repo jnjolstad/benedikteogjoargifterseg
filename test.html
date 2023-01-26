@@ -2,18 +2,26 @@
 <html>
 <head>
 <style>
-img {
-  height: 100vh;
+#image-container {
+  height: 80vh;
   width: auto;
   object-fit: contain;
+}
+#button-container {
+  height: 20vh;
+  justify-content: center; /* centers elements horizontally */
 }
 </style>
 </head>
 <body>
 
-<img id="image" src="images/benedikteogjoar.jpg">
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
+<div id="image-container">
+  <img id="image" src="images/benedikteogjoar.jpg">
+</div>
+<div id="button-container">
+  <button id="prev-btn">Previous</button>
+  <button id="next-btn">Next</button>
+</div>
 
 <script>
 var image = document.getElementById("image");
