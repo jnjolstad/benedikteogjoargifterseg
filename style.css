@@ -22,4 +22,11 @@
   align-items: center; /* centers elements vertically */
   justify-content: center; /* centers elements horizontally */
   margin-top:5px;
+  font-size: 12px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008CBA; /* Blue */
 }
