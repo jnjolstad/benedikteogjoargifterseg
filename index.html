@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Invitasjoner</title>
-	<style>
-		nav a {
- 		 display: inline-block;
- 		 padding: 5px;
- 		 color: blue;
- 		 text-decoration: none;
-		}
-		nav a:hover {
-  		background-color: lightgray;
-		}
-	</style>
-  </head>
-  <body>
-    <nav>
-      <a href="benedikteogjoar.html">Benedikte og Joar</a>
-      <a href="marianneogjonpetter.html">Marianne og Jon Petter</a>
-      <a href="torjusogcarmen.html">Torjus og Carmen</a>
-      <a href="benedikteogjoar.html">Henrik og Ingun</a>
-      <a href="mommoogbessa.html">Mommo og Bessa</a>
-      <a href="toneogroger.html">Tone og Roger</a>
-      <a href="bernadeta.html">Bernadeta</a>
-      <a href="astridoggeorg.html">Marianne og Jon Petter</a>
-	  
-      <a href="torjusogcarmen.html">Torjus og Carmen</a>
-      <a href="benedikteogjoar.html">Henrik og Ingun</a>
-      <a href="mommoogbessa.html">Mommo og Bessa</a>
-      <a href="toneogroger.html">Tone og Roger</a>
-    </nav>
-  </body>
+<head>
+<style>
+#page {  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  }
+#image-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; /* centers elements vertically */
+  justify-content: center; /* centers elements horizontally */
+}
+#image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+#button-container {
+  display: flex;
+  align-items: center; /* centers elements vertically */
+  justify-content: center; /* centers elements horizontally */
+  margin-top:5px;
+}
+</style>
+</head>
+<body>
+  
+<div id="page">
+  <div id="image-container">
+    <img id="image" src="images/benedikteogjoar.jpg">
+  </div>
+  <div id="button-container">
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn">Next</button>
+  </div>
+</div>
+  
+<script>
+var image = document.getElementById("image");
+var prevBtn = document.getElementById("prev-btn");
+var nextBtn = document.getElementById("next-btn");
+var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
+var images = ["images/benedikteogjoar.jpg", "images/" + pageName];
+
+var currentImageIndex = 0;
+
+prevBtn.addEventListener("click", function() {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  image.src = images[currentImageIndex];
+});
+nextBtn.addEventListener("click", function() {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  image.src = images[currentImageIndex];
+});
+</script>
+</body>
 </html>

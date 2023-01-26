@@ -2,28 +2,62 @@
 <html>
 <head>
 <style>
+#page {  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  }
+#image-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center; /* centers elements vertically */
+  justify-content: center; /* centers elements horizontally */
+}
 #image {
-  width: 100%;
   height: 100%;
-  margin:auto;
+  width: auto;
+  object-fit: contain;
+}
+#button-container {
+  display: flex;
+  align-items: center; /* centers elements vertically */
+  justify-content: center; /* centers elements horizontally */
+  margin-top:5px;
 }
 </style>
 </head>
 <body>
-
-<img id="image" src="images/benedikteogjoar.jpg">
-
+  
+<div id="page">
+  <div id="image-container">
+    <img id="image" src="images/benedikteogjoar.jpg">
+  </div>
+  <div id="button-container">
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn">Next</button>
+  </div>
+</div>
+  
 <script>
 var image = document.getElementById("image");
+var prevBtn = document.getElementById("prev-btn");
+var nextBtn = document.getElementById("next-btn");
+var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
+var images = ["images/benedikteogjoar.jpg", "images/" + pageName];
 
-var images = ["images/benedikteogjoar.jpg", "images/evaognour.jpg"];
 var currentImageIndex = 0;
 
-image.addEventListener("click", function() {
+prevBtn.addEventListener("click", function() {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  image.src = images[currentImageIndex];
+});
+nextBtn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   image.src = images[currentImageIndex];
 });
 </script>
-
 </body>
 </html>
