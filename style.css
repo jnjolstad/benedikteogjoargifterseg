@@ -24,10 +24,6 @@
   margin-top:5px;
 }
 .button {
-  display: flex;
-  align-items: center; /* centers elements vertically */
-  justify-content: center; /* centers elements horizontally */
-  margin-top:5px;
   font-size: 12px;
   border: none;
   color: white;
