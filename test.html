@@ -2,27 +2,30 @@
 <html>
 <head>
 <style>
-#image-container {
-  height: 80vh;
+#page {  
+  height: 100vh;
   width: auto;
+  }
+#image-container {
   object-fit: contain;
 }
 #button-container {
-  height: 20vh;
   align-items: center; /* centers elements vertically */
 }
 </style>
 </head>
 <body>
-
-<div id="image-container">
-  <img id="image" src="images/benedikteogjoar.jpg">
+  
+<div id="page">
+  <div id="image-container">
+    <img id="image" src="images/benedikteogjoar.jpg">
+  </div>
+  <div id="button-container">
+    <button id="prev-btn">Previous</button>
+    <button id="next-btn">Next</button>
+  </div>
 </div>
-<div id="button-container">
-  <button id="prev-btn">Previous</button>
-  <button id="next-btn">Next</button>
-</div>
-
+  
 <script>
 var image = document.getElementById("image");
 var prevBtn = document.getElementById("prev-btn");
