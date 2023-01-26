@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-#image {
-  width: 100%;
-  height: 100%;
-  margin:auto;
-}
-</style>
-</head>
-<body>
-
-<img id="image" src="images/1.jpg">
-
-<script>
-var image = document.getElementById("image");
-
-var images = ["images/1.jpg", "images/2.jpg"];
-var currentImageIndex = 0;
-
-image.addEventListener("click", function() {
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  image.src = images[currentImageIndex];
-});
-</script>
-
-</body>
+  <head>
+    <title>Invitasjoner</title>
+	<style>
+		nav a {
+ 		 display: inline-block;
+ 		 padding: 5px;
+ 		 color: blue;
+ 		 text-decoration: none;
+		}
+		nav a:hover {
+  		background-color: lightgray;
+		}
+	</style>
+  </head>
+  <body>
+    <nav>
+      <a href="benedikteogjoar.html">Benedikte og Joar</a>
+      <a href="marianneogjonpetter.html">Marianne og Jon Petter</a>
+      <a href="torjusogcarmen.html">Torjus og Carmen</a>
+      <a href="benedikteogjoar.html">Henrik og Ingun</a>
+      <a href="mommoogbessa.html">Mommo og Bessa</a>
+      <a href="toneogroger.html">Tone og Roger</a>
+      <a href="bernadeta.html">Bernadeta</a>
+      <a href="astridoggeorg.html">Marianne og Jon Petter</a>
+	  
+      <a href="torjusogcarmen.html">Torjus og Carmen</a>
+      <a href="benedikteogjoar.html">Henrik og Ingun</a>
+      <a href="mommoogbessa.html">Mommo og Bessa</a>
+      <a href="toneogroger.html">Tone og Roger</a>
+    </nav>
+  </body>
 </html>
