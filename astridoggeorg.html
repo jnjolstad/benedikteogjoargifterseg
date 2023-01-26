@@ -7,11 +7,11 @@
   
 <div id="page">
   <div id="image-container">
+    <img id="image" src="images/" + pageName">
     <script>
       var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
      document.getElementById("image").src = "images/" + pageName;
     </script>
-   <img id="image" src="images/" + pageName">
   </div>
   <div id="button-container">
     <button id="prev-btn">Forrige</button>
