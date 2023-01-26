@@ -6,11 +6,11 @@ var images = ["images/" + pageName", "images/benedikteogjoar.jpg"];
 
 var currentImageIndex = 0;
 
-prev-btn.addEventListener("click", function() {
+prevBtn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
   image.src = images[currentImageIndex];
 });
-next-btn.addEventListener("click", function() {
+nextBtn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   image.src = images[currentImageIndex];
 });
