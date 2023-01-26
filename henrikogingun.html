@@ -12,14 +12,11 @@
 <body>
 
 <img id="image" src="images/benedikteogjoar.jpg">
-
 <script>
 var image = document.getElementById("image");
-
 var images = ["images/benedikteogjoar.jpg", "images/henrikogingun.jpg"];
-var currentImageIndex = 0;
 
-image.addEventListener("click", function() {
+mage.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   image.src = images[currentImageIndex];
 });
