@@ -7,11 +7,15 @@
   
 <div id="page">
   <div id="image-container">
-    <img id="image" src="images/benedikteogjoar.jpg">
+<img id="image" src="">
+<script>
+  var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
+  document.getElementById("image").src = "images/" + pageName;
+</script>
   </div>
   <div id="button-container">
-    <button id="prev-btn">Previous</button>
-    <button id="next-btn">Next</button>
+    <button id="prev-btn">Forrige</button>
+    <button id="next-btn">Neste</button>
   </div>
 </div>
   
