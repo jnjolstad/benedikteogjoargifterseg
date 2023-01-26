@@ -23,7 +23,7 @@
   justify-content: center; /* centers elements horizontally */
   margin-top:5px;
 }
-.button {
+#prev-btn, #next-btn {
   font-size: 12px;
   border: none;
   color: white;
