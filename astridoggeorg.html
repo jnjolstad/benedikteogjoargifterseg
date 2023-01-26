@@ -1,3 +1,4 @@
+Copy code
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +8,18 @@
   
 <div id="page">
   <div id="image-container">
-    var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
-    <img id="image" src="images/" + pageName">
+    <img id="image" src="">
   </div>
   <div id="button-container">
     <button id="prev-btn">Previous</button>
     <button id="next-btn">Next</button>
   </div>
 </div>
+  
+<script>
+var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
+document.getElementById("image").src = "images/" + pageName;
+</script>
   
 <script src="script.js"></script>
 
