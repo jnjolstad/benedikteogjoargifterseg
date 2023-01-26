@@ -1,4 +1,3 @@
-<script>
 var image = document.getElementById("image");
 var prevBtn = document.getElementById("prev-btn");
 var nextBtn = document.getElementById("next-btn");
@@ -15,4 +14,3 @@ nextBtn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   image.src = images[currentImageIndex];
 });
-</script>
