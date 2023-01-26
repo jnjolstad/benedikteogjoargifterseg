@@ -34,7 +34,12 @@ var image = document.getElementById("image");
 var prevBtn = document.getElementById("prev-btn");
 var nextBtn = document.getElementById("next-btn");
 var pageName = location.pathname.split("/").pop();
-var images = ["images/benedikteogjoar.jpg", "images/" + pageName + ".jpg"];
+if(pageName){
+  var images = ["images/benedikteogjoar.jpg", "images/" + pageName + ".jpg"];
+}else{
+  var images = ["images/benedikteogjoar.jpg"];
+}
+
 var currentImageIndex = 0;
 
 prevBtn.addEventListener("click", function() {
