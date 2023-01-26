@@ -10,7 +10,7 @@ prev-btn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
   image.src = images[currentImageIndex];
 });
-nex-btn.addEventListener("click", function() {
+next-btn.addEventListener("click", function() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   image.src = images[currentImageIndex];
 });
