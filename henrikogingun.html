@@ -4,8 +4,13 @@
 <style src="style.css"></style>
 </head>
 <body>
-  
-<include src="body.html"></include>
+   <script>
+      $(function() {
+         $("#includeHtml").load("body.html");
+      });
+   </script>
+
+<div id="includeHtml"></div>
   
 <script src="script.js"></script>
 
