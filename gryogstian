@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div id="page">
+  <div id="image-container">
+<img id="image" src="">
+<script>
+  var pageName = location.pathname.split("/").pop().replace('.html', '.jpg');
+  document.getElementById("image").src = "images/" + pageName;
+</script>
+  </div>
+  <div id="button-container">
+    <button id="prev-btn">Forrige</button>
+    <button id="next-btn">Neste</button>
+  </div>
+</div>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
